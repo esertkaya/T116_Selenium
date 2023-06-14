@@ -22,10 +22,12 @@ public class C08_TekrarTesti {
         if (expectedTitle.equals(actualTitle)){
             System.out.println("Youtube Title testi PASSED");
         }else{
-            System.out.println("Youtube Title testi FAILED\nActual Title: "+actualTitle);
+            System.out.println("Youtube Title testi FAILED");
+            System.out.println("Actual Title: "+actualTitle);
         }
         //3. Sayfa URL'sinin “youtube” içerip içermediğini (contains) doğrulayın, içermiyorsa
         //doğru URL'yi yazdırın.
+
         String expectedUrlIcerik="youtube";
         String actualUrlIcerik= driver.getCurrentUrl();
         if (expectedTitle.contains(actualUrlIcerik)){
@@ -45,15 +47,17 @@ public class C08_TekrarTesti {
         driver.manage().window().fullscreen();
         //9. Ardından sayfa başlığının "Amazon" içerip içermediğini (contains) doğrulayın,
         //Yoksa doğru başlığı(Actual Title) yazdırın.
+
         String expectedTitleAmazon="Amazon";
         String actualTitleAmazon=driver.getTitle();
-        if (expectedTitleAmazon.contains(actualTitleAmazon)){
+        if (actualTitleAmazon.contains(expectedTitleAmazon)){
             System.out.println("Amazon Title Testi PASSED");
         }else{
             System.out.println("Amazon Title testi FAILED\nActual Title: "+actualTitleAmazon);
         }
         //10.Sayfa URL'sinin https://www.amazon.com/ olup olmadığını doğrulayın, degilse
         //doğru URL'yi yazdırın
+
         String expectedUrlAmazon="https://www.amazon.com/";
         String actualUrlAmazon= driver.getCurrentUrl();
         if (expectedUrlAmazon.equals(actualUrlAmazon)){
