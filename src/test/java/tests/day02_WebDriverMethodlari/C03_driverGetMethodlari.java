@@ -1,13 +1,13 @@
 package tests.day02_WebDriverMethodlari;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class C03_driverGetMethodlari {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver","src/resources/selenium-java-4.9.0/chromedriver_win32/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver=new ChromeDriver();
 
         driver.get("https://www.wisequarter.com");
 
